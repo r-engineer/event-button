@@ -4,6 +4,10 @@
 #include "button.h"
 #include "FlexiTimer2.h"
 
+#define LED1_DEFAULT	1000
+#define LED2_DEFAULT	1500
+#define LED3_DEFAULT	1750	
+
 blinky_led led1(2, 1000, 1); 
 blinky_led led2(3, 1500, 1);
 blinky_led led3(4, 1750, 1);
@@ -111,7 +115,7 @@ void button1_lp_callback(uint16_t call_count)
 	if(call_count == 1)
 	{
 		//set the led timer to the default value_comp
-		led1.set_on_off_time();
+		led1.set_on_off_time(LED1_DEFAULT);
 	}
 }
 
@@ -123,7 +127,7 @@ void button2_lp_callback(uint16_t call_count)
 	if(call_count == 1)
 	{
 		//set the led timer to the default value_comp
-		led2.set_on_off_time();
+		led2.set_on_off_time(LED2_DEFAULT);
 	}
 }
 
@@ -135,7 +139,7 @@ void button3_lp_callback(uint16_t call_count)
 	if(call_count == 1)
 	{
 		//set the led timer to the default value_comp
-		led3.set_on_off_time();
+		led3.set_on_off_time(LED3_DEFAULT);
 	}
 }
 
